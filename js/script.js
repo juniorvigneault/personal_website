@@ -6,6 +6,9 @@ window.onload = (e) => {
 
 // load images when seeing them
 function lazyLoading() {
+  // header appear
+  let header = document.querySelector("header");
+  header.style.opacity = 1;
   const lazyImages = document.querySelectorAll("img[data-src]");
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
